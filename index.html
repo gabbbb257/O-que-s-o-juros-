@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Juros: o que você precisa saber antes de vender a prazo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #007BFF;
+    }
+
+    h3 {
+      color: #444;
+    }
+
+    .botao, button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    input, select {
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #resultado {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Juros: o que você precisa saber antes de vender a prazo</h1>
+    <p>Feito para jovens empreendedores que querem entender como os juros funcionam e como eles afetam seus lucros nas vendas parceladas.</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>O que são Juros?</h2>
+      <p><strong>Juros</strong> são uma quantia que se paga ou se recebe pelo uso do dinheiro ao longo do tempo. Eles representam o <strong>custo do tempo</strong>: quanto mais tempo você demora para receber, maior é o valor que deve ser cobrado para compensar essa espera.</p>
+      <p>Se você vende algo e o cliente vai pagar só daqui a 30 dias, esse dinheiro parado não rende nada para você, mas o seu negócio continua tendo despesas (estoque, transporte, inflação, etc.). Por isso, você cobra juros para garantir que o valor recebido no futuro continue sendo justo.</p>
+      <p>Você também encontra juros em várias situações do dia a dia, como:</p>
+      <ul>
+        <li>💳 Compras parceladas no cartão</li>
+        <li>🏦 Empréstimos ou financiamentos bancários</li>
+        <li>💰 Aplicações financeiras como poupança ou CDBs</li>
+        <li>🧾 Vendas a prazo no carnê ou boleto</li>
+      </ul>
+      <p>Em todos esses casos, os juros compensam riscos, o tempo de espera e a perda de valor do dinheiro.</p>
+    </section>
+
+    <section>
+      <h2>Tipos de Juros</h2>
+      <p>Existem dois tipos principais de juros: <strong>simples</strong> e <strong>compostos</strong>. Saber a diferença entre eles é fundamental para calcular corretamente valores em vendas a prazo, empréstimos ou investimentos.</p>
+
+      <h3>🔹 Juros Simples</h3>
+      <p>Os <strong>juros simples</strong> são calculados sempre sobre o valor inicial (chamado de principal). Isso significa que o valor dos juros é o mesmo em todos os períodos.</p>
+      <p><strong>Fórmula:</strong> J = P × i × t</p>
+      <ul>
+        <li><strong>P:</strong> valor principal (ex: R$ 100)</li>
+        <li><strong>i:</strong> taxa de juros (ex: 2% ao mês)</li>
+        <li><strong>t:</strong> tempo em meses</li>
+      </ul>
+      <p><strong>Exemplo:</strong><br>
+        R$ 100 com 2% ao mês durante 3 meses:<br>
+        J = 100 × 0,02 × 3 = R$ 6<br>
+        Total a pagar = R$ 106
+      </p>
+
+      <h3>🔹 Juros Compostos</h3>
+      <p>Os <strong>juros compostos</strong> são calculados sobre o valor acumulado, ou seja, sobre o valor total com os juros anteriores. Por isso, são chamados de "juros sobre juros".</p>
+      <p><strong>Fórmula:</strong> M = P × (1 + i)<sup>t</sup></p>
+      <ul>
+        <li><strong>M:</strong> valor final (montante)</li>
+        <li><strong>P:</strong> valor inicial</li>
+        <li><strong>i:</strong> taxa de juros</li>
+        <li><strong>t:</strong> tempo (em meses, anos, etc.)</li>
+      </ul>
+      <p><strong>Exemplo:</strong><br>
+        R$ 100 com 2% ao mês durante 3 meses:<br>
+        M = 100 × (1 + 0,02)³ ≈ R$ 106,12<br>
+        Juros = R$ 6,12
+      </p>
+      <p><strong>Conclusão:</strong> quanto maior o tempo, maior a diferença entre os dois tipos de juros. Os compostos crescem mais rápido e são os mais comuns em bancos e cartões.</p>
+    </section>
+
+    <section>
+      <h2>Simulador de Juros</h2>
+      <p>Preencha os campos abaixo para simular o valor final com juros simples ou compostos:</p>
+
+      <label>Valor inicial (R$):</label>
+      <input type="number" id="valor" placeholder="Ex: 100">
+
+      <label>Taxa de juros (% ao mês):</label>
+      <input type="number" id="taxa" placeholder="Ex: 2">
+
+      <label>Tempo (meses):</label>
+      <input type="number" id="tempo" placeholder="Ex: 3">
+
+      <label>Tipo de juros:</label>
+      <select id="tipo">
+        <option value="simples">Juros Simples</option>
+        <option value="composto">Juros Compostos</option>
+      </select>
+
+      <button onclick="calcular()">Calcular</button>
+
+      <p id="resultado"></p>
+    </section>
+
+    <section>
+      <h2>Sobre este projeto</h2>
+      <p>Este site foi criado como material de apoio para ensinar o conteúdo de <strong>juros</strong>, na disciplina de <strong>Gestão Econômica e Financeira</strong>, do curso de Agronomia.</p>
+      <p>O conteúdo foi compartilhado com produtores e empreendedores através de QR Code em eventos e agropecuárias locais.</p>
+      <p><strong>Criado por:</strong> Gabriel Konzen<br>
+         <strong>Ano:</strong> 2025 – Francisco Beltrão – PR</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gabriel Konzen – Projeto Educacional</p>
+  </footer>
+
+  <script>
+    function calcular() {
+      let valor = parseFloat(document.getElementById("valor").value);
+      let taxa = parseFloat(document.getElementById("taxa").value) / 100;
+      let tempo = parseInt(document.getElementById("tempo").value);
+      let tipo = document.getElementById("tipo").value;
+      let resultado = "";
+
+      if (isNaN(valor) || isNaN(taxa) || isNaN(tempo)) {
+        resultado = "Por favor, preencha todos os campos corretamente.";
+      } else {
+        if (tipo === "simples") {
+          let juros = valor * taxa * tempo;
+          let total = valor + juros;
+          resultado = `Juros: R$ ${juros.toFixed(2)}<br>Total a receber: R$ ${total.toFixed(2)}`;
+        } else {
+          let total = valor * Math.pow(1 + taxa, tempo);
+          let juros = total - valor;
+          resultado = `Juros: R$ ${juros.toFixed(2)}<br>Total a receber: R$ ${total.toFixed(2)}`;
+        }
+      }
+
+      document.getElementById("resultado").innerHTML = resultado;
+    }
+  </script>
+
+</body>
+</html>
